@@ -1,0 +1,12 @@
+if specs.errors:
+    print("Errors loading openapi spec:")
+    for error in specs.errors:
+        print("-", error)
+    exit(1)
+
+print("Endpoints in the petstore API: ")
+
+for path in specs.paths:
+    print(f"\n Path: {path.path}")
+    for method in path.operations:
+        print(f"  -Method: {method.upper()}")
