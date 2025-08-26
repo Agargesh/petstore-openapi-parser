@@ -1,5 +1,4 @@
 from prance import ResolvingParser
-
 parser = ResolvingParser("specs/petstore.yaml")
 specs = parser.specification
 
